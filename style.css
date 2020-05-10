@@ -1,0 +1,188 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #fff;
+    background-color: #000000;
+}
+
+header {
+    padding-top: 20px;
+}
+header > h1 {
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 5px inset darkgray;
+}
+
+#score {
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: 30px;
+    font-weight: 600;
+    color:yellow;
+}
+
+#quiz {
+    display: flex;
+    flex-direction: column;
+}
+
+.slide {
+    display: flex;
+    flex-direction: column;
+}
+
+.question{
+    line-height: 1em;
+    font-weight: 600;
+    font-size: 30px;
+    margin: 20px 0px 10px 0px;
+}
+
+
+.answers{
+    list-style-type: none;
+    padding: 10px;
+    margin-left: 50px;
+}
+
+.answers > label{
+    line-height: 50px;
+    font-size: 21px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.correct {
+    background-color: green;
+}
+
+.wrong {
+    background-color: red;
+}
+
+.answers > label > input{
+    margin-right: 10px;
+}
+
+.answers > label:hover{
+    background-color: #fff;
+    color: black;
+    cursor: pointer;
+}
+
+/* Fading Animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1} 
+}
+
+button{
+    padding: 20px;
+    font-size: 1em;
+    letter-spacing: 0.057em;
+    background-color: darkviolet;
+    color: #fff;
+    
+    border: 0;
+    margin-bottom: 20px;
+}
+
+#prevBtn{
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+#nextBtn{
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.controlBtn{
+    display: flex;
+    justify-content: space-between;
+}
+
+#submit{
+    background-color: green;
+    border-radius: 1em;
+    max-width: 200px;
+    align-self: center;
+}
+
+#results {
+    border-top: 5px inset darkgray;
+    border-bottom: 5px inset darkgray;
+}
+
+.center {
+    text-align: center;
+}
+
+.resPar {
+    font-weight: 600;
+    font-size: 35px;
+}
+
+.resParBig {
+    font-size: 5em;
+}
+
+/*  600px or bigger*/
+@media (min-width: 600px) {
+    .main {
+        /* width: 50%; */
+        margin: 0 auto;
+    }
+
+    button{
+        width: 150px;
+        font-weight: 700;
+    }
+}
+
+/*  600px or bigger*/
+@media (min-width: 900px) {
+    .main {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    button{
+        width: 150px;
+        font-weight: 700;
+    }
+}
+
+/*  600px or bigger*/
+@media (min-width: 1500px) {
+    .main {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    button{
+        width: 250px;
+        font-weight: 700;
+    }
+}
